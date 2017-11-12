@@ -1,0 +1,3 @@
+th run.lua --dataset cs --datapath /home/komatsu/work/datasets/cityscapes/ --model models/encoder.lua --save /home/komatsu/work/datasets/torch/enet/enc640 --cachepath /home/komatsu/work/datasets/torch_cache/encoder640 --imHeight 320 --imWidth 640 --labelHeight 40 --labelWidth 80 --devid 1 --nGPU 1 --batchSize 10
+
+th run.lua --dataset cs --datapath /home/komatsu/work/datasets/cityscapes/ --model models/decoder.lua --save /home/komatsu/work/datasets/torch/enet/dec640 --cachepath /home/komatsu/work/datasets/torch_cache/decoder640 --imHeight 320 --imWidth 640 --labelHeight 320 --labelWidth 640 --devid 1 --nGPU 1 --batchSize 10 --CNNEncoder /home/komatsu/work/datasets/torch/enet/enc640/model-299.net
