@@ -115,6 +115,7 @@ else
 
     --load training images:
     local dataTemp = image.load(imgPath,3, 'byte')
+    dataTemp = dataTemp:float()/255 -- 0 - 255 => 0.0 - 1.0
     trainData.data[c] = image.scale(dataTemp,opt.imWidth, opt.imHeight)
 
 
