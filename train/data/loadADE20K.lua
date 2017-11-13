@@ -1,4 +1,13 @@
 ----------------------------------------------------------------------
+-- ADE20K data loader,
+----------------------------------------------------------------------
+
+require 'torch'   -- torch
+require 'image'   -- to visualize the dataset
+
+torch.setdefaulttensortype('torch.FloatTensor')
+
+----------------------------------------------------------------------
 -- ADE20K dataset:
 
 -- get class info
@@ -125,7 +134,7 @@ else
     -- convert to int and write to data structure:
     trainData.labels[c] = labelFile
 
-    if c % 20 == 0 then
+    if c % 500 == 0 then
       xlua.progress(c, trsize)
     end
     collectgarbage()
@@ -166,7 +175,7 @@ else
     -- convert to int and write to data structure:
     testData.labels[c] = labelFile
 
-    if c % 20 == 0 then
+    if c % 500 == 0 then
       xlua.progress(c, trsize)
     end
     collectgarbage()
