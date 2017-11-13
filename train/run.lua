@@ -34,8 +34,10 @@ elseif opt.dataset == 'cs' then
    data = require 'data/loadCityscape'
 elseif opt.dataset == 'su' then
    data = require 'data/loadSUN'
+elseif opt.dataset == 'ad' then
+   data = require 'data/loadADE20K'
 else
-   error ("Dataset loader not found. (Available options are: cv/cs/su")
+   error ("Dataset loader not found. (Available options are: cv/cs/su/ad")
 end
 
 print 'saving opt as txt and t7'

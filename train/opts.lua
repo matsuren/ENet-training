@@ -31,7 +31,7 @@ function opts.parse(arg)
    --channels              (default 3)
    --datapath              (default /media/Dataset/)
                            dataset location
-   --dataset               (default cv)          dataset type: cv(CamVid)/cs(cityscapes)/su(SUN)
+   --dataset               (default cv)          dataset type: cv(CamVid)/cs(cityscapes)/su(SUN)/ad(ADE20K)
    --cachepath             (default /media/)     cache directory to save the loaded dataset
    --imHeight              (default 360)         image height  (360 cv/256 cs/256 su)
    --imWidth               (default 480)         image width   (480 cv/512 cs/328 su)
